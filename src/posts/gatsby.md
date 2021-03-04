@@ -5,6 +5,8 @@ date: "2021-04-04"
 
 I Just launched a new bootcamp!
 
+![Memaw](./memaw.jpg)
+
 ## Topics Covered
 
 1. Gatsby

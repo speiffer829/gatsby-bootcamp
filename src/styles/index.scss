@@ -1,4 +1,6 @@
-$blue: #094862;
+$blue: #2550c6;
+// $blue: #094862;
+
 
 *{
 	box-sizing: border-box;
@@ -28,7 +30,7 @@ nav{
 			margin: 0;
 
 			a{
-				color: #094862;
+				color: $blue;
 				text-decoration: none;
 				border: solid 2px transparent;
 				padding: .5em;
@@ -36,7 +38,7 @@ nav{
 				transition: all 250ms;
 
 				&.current{
-					border-color: #094862;
+					border-color: $blue;
 				}
 			}
 
@@ -53,7 +55,7 @@ nav{
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	max-width: 1200px;
+	max-width: 750px;
 	width: 100%;
 	margin: 0px auto;
 
@@ -701,4 +703,11 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+footer{
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  border-top: solid #c3c4c6 2px;
+  text-align: center;
 }
