@@ -16,6 +16,13 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
+      resolve: "gatsby-source-contentful",
+      options: {
+        spaceId: "45g27oru0x25",
+        accessToken: "5E7qPmiw56_njCZU3NMHkUOmKr5s6b-_8L0LA47Hi4g",
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "src",

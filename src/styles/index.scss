@@ -38,9 +38,12 @@ nav{
 				transition: all 250ms;
 
 				&.current{
-					border-color: $blue;
-          color: #5fcf5f;
+					border-color: $green;
 				}
+
+        &:hover{
+          color: $green;
+        }
 			}
 
 			&:first-of-type{
