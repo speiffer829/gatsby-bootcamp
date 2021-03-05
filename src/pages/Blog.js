@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from "../Components/Layout";
 import { Link, graphql, useStaticQuery } from "gatsby"
+import Img from 'gatsby-image'
 import * as blogStyles from './blog.module.scss'
 
 const BlogPage = () => {
@@ -14,6 +15,13 @@ const data = useStaticQuery(
             frontmatter {
               title
               date
+              featuredimg {
+                childImageSharp {
+                  fixed(width: 200) {
+                    ...GatsbyImageSharpFixed
+                  }
+                }
+              }
             }
             fields {
               slug
@@ -25,6 +33,8 @@ const data = useStaticQuery(
     }
   `
 )
+
+console.log(data.allMarkdownRemark.edges);
 	
 	return (
     <Layout className="blogpage">
@@ -33,8 +43,13 @@ const data = useStaticQuery(
         {data.allMarkdownRemark.edges.map(post => (
           <li key={post.node.id} className={blogStyles.post}>
             <Link to={`/Blog/${post.node.fields.slug}`}>
-              <h2>{post.node.frontmatter.title}</h2>
-              <p>{post.node.frontmatter.date}</p>
+              <Img
+                fixed={post.node.frontmatter.featuredimg.childImageSharp.fixed}
+              />
+              <span>
+                <h2>{post.node.frontmatter.title}</h2>
+                <p>{post.node.frontmatter.date}</p>
+              </span>
             </Link>
           </li>
         ))}

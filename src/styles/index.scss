@@ -1,5 +1,6 @@
 $blue: #2550c6;
 // $blue: #094862;
+$green:#5fcf5f;
 
 
 *{
@@ -8,7 +9,7 @@ $blue: #2550c6;
 }
 
 nav{
-	padding: 1rem 0rem 1rem;
+	padding: 1rem 0rem 3rem;
 
 	h1{
 		a{
@@ -32,13 +33,13 @@ nav{
 			a{
 				color: $blue;
 				text-decoration: none;
-				border: solid 2px transparent;
-				padding: .5em;
-				border-radius: 1rem;
+				border-bottom: solid 2px transparent;
+				padding: .5em .5rem .2rem;
 				transition: all 250ms;
 
 				&.current{
 					border-color: $blue;
+          color: #5fcf5f;
 				}
 			}
 

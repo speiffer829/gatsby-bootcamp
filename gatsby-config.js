@@ -6,36 +6,35 @@
 
 module.exports = {
   /* Your site config here */
-  siteMetadata:{
+  siteMetadata: {
     author: 'Spenser "raw dawg" Peiffer',
-    title: 'Spenser\'s Juicy Bootcamp',
-    foo: 'bar',
+    title: "Spenser's Juicy Bootcamp",
+    foo: "bar",
   },
   plugins: [
-    'gatsby-plugin-sass',
+    "gatsby-plugin-sass",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'src',
-        path: `${__dirname}/src/`
-      }
+        name: "src",
+        path: `${__dirname}/src/`,
+      },
     },
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
-          'gatsby-remark-relative-images',
+          "gatsby-remark-relative-images",
           {
-            resolve: 'gatsby-remark-images',
+            resolve: "gatsby-remark-images",
             options: {
-              maxWidth: 750,
-              linkImagesToOriginal: false
-            }
-          }
-        ]
-      }
+              linkImagesToOriginal: false,
+            },
+          },
+        ],
+      },
     },
-    'gatsby-plugin-sharp',
-
   ],
 }
