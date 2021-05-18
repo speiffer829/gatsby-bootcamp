@@ -8,18 +8,22 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     author: 'Spenser "raw dawg" Peiffer',
-    title: "Spenser's Juicy Bootcamp",
+    title: "Spenser's BootyCamp",
     foo: "bar",
   },
   plugins: [
+    "gatsby-plugin-image",
     "gatsby-plugin-sass",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "@contentful/gatsby-transformer-contentful-richtext",
+    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-contentful",
       options: {
-        spaceId: "45g27oru0x25",
-        accessToken: "5E7qPmiw56_njCZU3NMHkUOmKr5s6b-_8L0LA47Hi4g",
+        spaceId: process.env.GATSBY_CONTENTFUL_SPACE_ID,
+        accessToken: process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN,
+        downloadLocal: true,
       },
     },
     {

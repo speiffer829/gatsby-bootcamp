@@ -21,7 +21,7 @@ const Header = () => {
     <header>
       <nav>
         <h1>
-          <Link to="/">{data.site.siteMetadata.title} by </Link>
+          <Link to="/">{data.site.siteMetadata.title}</Link>
         </h1>
         <ul>
           <li>
